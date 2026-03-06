@@ -1,0 +1,35 @@
+/* APPOINTMENT PAGE */
+
+.appointment-container{
+
+width:350px;
+margin:100px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+
+}
+
+.appointment-container input{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+
+}
+
+.appointment-container button{
+
+width:100%;
+padding:10px;
+background:#007bff;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+
+}
