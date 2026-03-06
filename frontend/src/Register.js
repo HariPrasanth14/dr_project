@@ -3,75 +3,81 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./style.css";
 
-function Register(){
+function Register() {
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const [email,setEmail] = useState("");
-const [password,setPassword] = useState("");
-const [number,setNumber] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [number, setNumber] = useState("");
 
-const handleRegister = async () => {
+    const handleRegister = async () => {
 
-try{
+        try {
 
-await axios.post("http://localhost:5000/register",{
-email,
-password,
-number
-})
+            await axios.post("http://localhost:5000/register", {
+                email,
+                password,
+                number
+            })
 
-alert("Registered Successfully")
+            alert("Registered Successfully")
 
-navigate("/")
+            navigate("/")
 
-}catch(err){
+        } catch (err) {
 
-alert("Error")
+            alert("Error")
 
-}
+        }
 
-}
+    }
 
-return(
+    return (
+        <div className="register_form">
 
-<div className="container">
+        <div className="container">
 
-<h2>Register</h2>
-
-<input
-type="email"
-placeholder="Email"
-onChange={(e)=>setEmail(e.target.value)}
-/>
-
+            <h2 style={{"fontWeight":"bold"}}>Register</h2>
 <br/>
-
-<input
-type="password"
-placeholder="Password"
-onChange={(e)=>setPassword(e.target.value)}
-/>
-
 <br/>
+            <input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+            />
 
-<input
-type="text"
-placeholder="Phone Number"
-onChange={(e)=>setNumber(e.target.value)}
-/>
+            <br />
+            <br />
 
-<br/><br/>
+            <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+            />
 
-<button onClick={handleRegister}>Register</button>
+            <br />
+            <br />
 
-<p>
-Already have account? <Link to="/">Login</Link>
-</p>
+            <input
+                type="text"
+                placeholder="Phone Number"
+                onChange={(e) => setNumber(e.target.value)}
+            />
 
-</div>
+            <br /><br />
 
-)
+            <button onClick={handleRegister}>Register</button>
+<br/>
+<br/>
+            <p>
+                Already have account? <Link to="/">Login</Link>
+            </p>
+
+        </div>
+        </div>
+
+    )
 
 }
 

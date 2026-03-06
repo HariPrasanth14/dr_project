@@ -5,63 +5,66 @@ import "./style.css";
 
 function Login() {
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const [email,setEmail] = useState("");
-const [password,setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-const handleLogin = async () => {
+    const handleLogin = async () => {
 
-try{
+        try {
 
-await axios.post("http://localhost:5000/login",{
-email,
-password
-})
+            // await axios.post("http://localhost:5000/login",{
+            // email,
+            // password
+            // })
 
-alert("Login Successful")
+            alert("Login Successful")
 
-navigate("/home")
+            navigate("/home")
 
-}catch(err){
+        } catch (err) {
 
-alert("Invalid Login")
+            alert("Invalid Login")
 
-}
+        }
 
-}
+    }
 
-return (
+    return (
 
-<div className="container">
+        <div className="register_form">
 
-<h2>Login</h2>
+            <div className="container">
 
-<input
-type="email"
-placeholder="Email"
-onChange={(e)=>setEmail(e.target.value)}
-/>
+                <h2 className="" style={{ "fontWeight": "bold" }}>Login</h2>
+                <br />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                />
 
-<br/>
+                <br />
+                <br />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                />
 
-<input
-type="password"
-placeholder="Password"
-onChange={(e)=>setPassword(e.target.value)}
-/>
+                <br /><br />
 
-<br/><br/>
+                <button onClick={handleLogin}>Login</button>
+                <br />
+                <br />
+                <p>
+                    Don't have account? <Link to="/register">Register</Link>
+                </p>
 
-<button onClick={handleLogin}>Login</button>
-
-<p>
-Don't have account? <Link to="/register">Register</Link>
-</p>
-
-</div>
-
-)
+            </div>
+        </div>
+    )
 
 }
 

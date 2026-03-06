@@ -1,24 +1,24 @@
-body{
-background:#f4f6f9;
+
+
+.register_form{
+background:#ffffff;
 font-family:Arial, Helvetica, sans-serif;
-margin:0;
+margin:auto;
 padding: 0;
 display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
+width: 450px;
 }
-
 .container{
-width:350px;
+width:150px;
 padding: 30px;
 background:rgb(99, 162, 233);
-padding:30px;
 border-radius:10px;
 box-shadow:0px 0px 10px rgba(0,0,0,0.1);
 text-align:center;
 }
-
 h2{
 margin-bottom:20px;
 color:#0c0b0b;
@@ -34,7 +34,7 @@ font-size:14px;
 }
 
 button{
-width:95%;
+width:90%;
 padding:10px;
 background:#007bff;
 border:none;
@@ -42,6 +42,7 @@ color:white;
 font-size:16px;
 border-radius:5px;
 cursor:pointer;
+border-radius: 30px;
 }
 
 button:hover{
@@ -56,4 +57,4 @@ font-size:14px;
 a{
 color:#082f58;
 text-decoration:none;
-}
+} 
