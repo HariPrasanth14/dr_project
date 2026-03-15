@@ -9,7 +9,18 @@ const { configDotenv } = require("dotenv")
 
 const app = express()
 configDotenv()
-app.use(cors("*"))
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://mern-project-obvp.vercel.app"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["GET","POST","PUT","DELETE","PATCH"],
+  credentials: true
+}));
+
+app.options("*", cors());
 app.use(express.json())
 
 // MongoDB connect
@@ -54,6 +65,8 @@ app.get("/appointments", async (req,res)=>{
     res.json(data)
 })
 
-app.listen(5000, ()=>{
-    console.log("Server running on port 5000")
-})
+// app.listen(5000, ()=>{
+//     console.log("Server running on port 5000")
+// })
+
+module.exports = app
