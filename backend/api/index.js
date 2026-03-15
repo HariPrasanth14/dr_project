@@ -45,6 +45,10 @@ const Appointment = require("../models/appointment");
 
 /* ---------------- Register ---------------- */
 
+app.get("/",async(req,res)=>{
+  res.json("Welcome")
+})
+
 app.post("/register", async (req, res) => {
   try {
     await connectDB();
