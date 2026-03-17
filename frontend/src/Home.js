@@ -18,21 +18,13 @@ function Home() {
       {/* NAVBAR */}
 
       <nav className="navbar">
-
         <h2 className="logo">DoctorCare</h2>
-
         <ul>
-
-          <li><a href="#">Home</a></li>
-
+          <li><Link to="/">Home</Link></li>
           <li><a href="#doctors">Doctors</a></li>
-
           <li><Link to="/appointment">Appointment</Link></li>
-
           <li><Link to="/">Login</Link></li>
-
         </ul>
-
       </nav>
 
 
