@@ -13,8 +13,8 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://mern-project-obvp.vercel.app"
-  "https://dr-appoinment-three.vercel.app/"
+  "https://mern-project-obvp.vercel.app",
+  "https://dr-appoinment-three.vercel.app"
 ];
 
 app.use(cors({
